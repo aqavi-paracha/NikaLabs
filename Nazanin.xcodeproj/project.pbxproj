@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		080CE69E1C44A5560081C7B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CE69D1C44A5560081C7B2 /* main.m */; };
 		080CE6A11C44A5560081C7B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CE6A01C44A5560081C7B2 /* AppDelegate.m */; };
-		080CE6A41C44A5560081C7B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CE6A31C44A5560081C7B2 /* ViewController.m */; };
-		080CE6A71C44A5560081C7B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080CE6A51C44A5560081C7B2 /* Main.storyboard */; };
 		080CE6A91C44A5560081C7B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080CE6A81C44A5560081C7B2 /* Assets.xcassets */; };
 		080CE6AC1C44A5560081C7B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080CE6AA1C44A5560081C7B2 /* LaunchScreen.storyboard */; };
+		080CE6B61C44A6520081C7B2 /* NLHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CE6B41C44A6520081C7B2 /* NLHomeVC.m */; };
+		080CE6B71C44A6520081C7B2 /* NLHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 080CE6B51C44A6520081C7B2 /* NLHomeVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +20,12 @@
 		080CE69D1C44A5560081C7B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		080CE69F1C44A5560081C7B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		080CE6A01C44A5560081C7B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		080CE6A21C44A5560081C7B2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		080CE6A31C44A5560081C7B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		080CE6A61C44A5560081C7B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		080CE6A81C44A5560081C7B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		080CE6AB1C44A5560081C7B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		080CE6AD1C44A5560081C7B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		080CE6B31C44A6520081C7B2 /* NLHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLHomeVC.h; path = Classes/NLHomeVC.h; sourceTree = "<group>"; };
+		080CE6B41C44A6520081C7B2 /* NLHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLHomeVC.m; path = Classes/NLHomeVC.m; sourceTree = "<group>"; };
+		080CE6B51C44A6520081C7B2 /* NLHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NLHomeVC.xib; path = Classes/NLHomeVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +60,9 @@
 			children = (
 				080CE69F1C44A5560081C7B2 /* AppDelegate.h */,
 				080CE6A01C44A5560081C7B2 /* AppDelegate.m */,
-				080CE6A21C44A5560081C7B2 /* ViewController.h */,
-				080CE6A31C44A5560081C7B2 /* ViewController.m */,
-				080CE6A51C44A5560081C7B2 /* Main.storyboard */,
+				080CE6B31C44A6520081C7B2 /* NLHomeVC.h */,
+				080CE6B41C44A6520081C7B2 /* NLHomeVC.m */,
+				080CE6B51C44A6520081C7B2 /* NLHomeVC.xib */,
 				080CE6A81C44A5560081C7B2 /* Assets.xcassets */,
 				080CE6AA1C44A5560081C7B2 /* LaunchScreen.storyboard */,
 				080CE6AD1C44A5560081C7B2 /* Info.plist */,
@@ -137,8 +137,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				080CE6AC1C44A5560081C7B2 /* LaunchScreen.storyboard in Resources */,
+				080CE6B71C44A6520081C7B2 /* NLHomeVC.xib in Resources */,
 				080CE6A91C44A5560081C7B2 /* Assets.xcassets in Resources */,
-				080CE6A71C44A5560081C7B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				080CE6A41C44A5560081C7B2 /* ViewController.m in Sources */,
 				080CE6A11C44A5560081C7B2 /* AppDelegate.m in Sources */,
+				080CE6B61C44A6520081C7B2 /* NLHomeVC.m in Sources */,
 				080CE69E1C44A5560081C7B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,14 +158,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		080CE6A51C44A5560081C7B2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				080CE6A61C44A5560081C7B2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		080CE6AA1C44A5560081C7B2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,6 +253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Nazanin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikalabs.Nazanin;
@@ -272,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Nazanin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikalabs.Nazanin;

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NLHomeVC.h
 //  Nazanin
 //
 //  Created by Abdul Qavi on 12/01/2016.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NLHomeVC : UIViewController
 
 @end
-

@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class NLHomeVC;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) NLHomeVC *homeVC;
 
 @end
 
