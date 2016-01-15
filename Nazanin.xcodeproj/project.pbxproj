@@ -13,8 +13,10 @@
 		080CE6B61C44A6520081C7B2 /* NLHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CE6B41C44A6520081C7B2 /* NLHomeVC.m */; };
 		080CE6B71C44A6520081C7B2 /* NLHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 080CE6B51C44A6520081C7B2 /* NLHomeVC.xib */; };
 		083989BB1C4896AD00B419B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 083989B91C4896AD00B419B0 /* LaunchScreen.storyboard */; };
-		083989BF1C489CB700B419B0 /* NLAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 083989BD1C489CB700B419B0 /* NLAboutVC.m */; };
-		083989C01C489CB700B419B0 /* NLAboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083989BE1C489CB700B419B0 /* NLAboutVC.xib */; };
+		083989BF1C489CB700B419B0 /* NLHomeBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 083989BD1C489CB700B419B0 /* NLHomeBaseVC.m */; };
+		083989C01C489CB700B419B0 /* NLHomeBaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083989BE1C489CB700B419B0 /* NLHomeBaseVC.xib */; };
+		083989C51C48A38800B419B0 /* NLAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 083989C31C48A38800B419B0 /* NLAboutVC.m */; };
+		083989C61C48A38800B419B0 /* NLAboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083989C41C48A38800B419B0 /* NLAboutVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +30,12 @@
 		080CE6B41C44A6520081C7B2 /* NLHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLHomeVC.m; path = Classes/NLHomeVC.m; sourceTree = "<group>"; };
 		080CE6B51C44A6520081C7B2 /* NLHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NLHomeVC.xib; path = Classes/NLHomeVC.xib; sourceTree = "<group>"; };
 		083989BA1C4896AD00B419B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		083989BC1C489CB700B419B0 /* NLAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLAboutVC.h; path = Classes/NLAboutVC.h; sourceTree = "<group>"; };
-		083989BD1C489CB700B419B0 /* NLAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLAboutVC.m; path = Classes/NLAboutVC.m; sourceTree = "<group>"; };
-		083989BE1C489CB700B419B0 /* NLAboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NLAboutVC.xib; path = Classes/NLAboutVC.xib; sourceTree = "<group>"; };
+		083989BC1C489CB700B419B0 /* NLHomeBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLHomeBaseVC.h; path = Classes/NLHomeBaseVC.h; sourceTree = "<group>"; };
+		083989BD1C489CB700B419B0 /* NLHomeBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLHomeBaseVC.m; path = Classes/NLHomeBaseVC.m; sourceTree = "<group>"; };
+		083989BE1C489CB700B419B0 /* NLHomeBaseVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NLHomeBaseVC.xib; path = Classes/NLHomeBaseVC.xib; sourceTree = "<group>"; };
+		083989C21C48A38800B419B0 /* NLAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLAboutVC.h; path = Classes/NLAboutVC.h; sourceTree = "<group>"; };
+		083989C31C48A38800B419B0 /* NLAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLAboutVC.m; path = Classes/NLAboutVC.m; sourceTree = "<group>"; };
+		083989C41C48A38800B419B0 /* NLAboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NLAboutVC.xib; path = Classes/NLAboutVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +90,15 @@
 		083989C11C489CC300B419B0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				083989BC1C489CB700B419B0 /* NLHomeBaseVC.h */,
+				083989BD1C489CB700B419B0 /* NLHomeBaseVC.m */,
+				083989BE1C489CB700B419B0 /* NLHomeBaseVC.xib */,
 				080CE6B31C44A6520081C7B2 /* NLHomeVC.h */,
 				080CE6B41C44A6520081C7B2 /* NLHomeVC.m */,
 				080CE6B51C44A6520081C7B2 /* NLHomeVC.xib */,
-				083989BC1C489CB700B419B0 /* NLAboutVC.h */,
-				083989BD1C489CB700B419B0 /* NLAboutVC.m */,
-				083989BE1C489CB700B419B0 /* NLAboutVC.xib */,
+				083989C21C48A38800B419B0 /* NLAboutVC.h */,
+				083989C31C48A38800B419B0 /* NLAboutVC.m */,
+				083989C41C48A38800B419B0 /* NLAboutVC.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -152,7 +160,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				083989C01C489CB700B419B0 /* NLAboutVC.xib in Resources */,
+				083989C01C489CB700B419B0 /* NLHomeBaseVC.xib in Resources */,
+				083989C61C48A38800B419B0 /* NLAboutVC.xib in Resources */,
 				083989BB1C4896AD00B419B0 /* LaunchScreen.storyboard in Resources */,
 				080CE6B71C44A6520081C7B2 /* NLHomeVC.xib in Resources */,
 				080CE6A91C44A5560081C7B2 /* Assets.xcassets in Resources */,
@@ -166,9 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				083989BF1C489CB700B419B0 /* NLAboutVC.m in Sources */,
+				083989BF1C489CB700B419B0 /* NLHomeBaseVC.m in Sources */,
 				080CE6A11C44A5560081C7B2 /* AppDelegate.m in Sources */,
 				080CE6B61C44A6520081C7B2 /* NLHomeVC.m in Sources */,
+				083989C51C48A38800B419B0 /* NLAboutVC.m in Sources */,
 				080CE69E1C44A5560081C7B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

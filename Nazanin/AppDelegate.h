@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class NLHomeVC;
-@class NLAboutVC;
+@class NLHomeBaseVC;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) NLAboutVC *aboutVC;
+@property (strong, nonatomic) NLHomeBaseVC *homeBaseVC;
 @property (strong, nonatomic) NLHomeVC *homeVC;
 
 @end
