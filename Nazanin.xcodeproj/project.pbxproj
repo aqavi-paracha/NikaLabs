@@ -10,9 +10,11 @@
 		080CE69E1C44A5560081C7B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CE69D1C44A5560081C7B2 /* main.m */; };
 		080CE6A11C44A5560081C7B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CE6A01C44A5560081C7B2 /* AppDelegate.m */; };
 		080CE6A91C44A5560081C7B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080CE6A81C44A5560081C7B2 /* Assets.xcassets */; };
-		080CE6AC1C44A5560081C7B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080CE6AA1C44A5560081C7B2 /* LaunchScreen.storyboard */; };
 		080CE6B61C44A6520081C7B2 /* NLHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CE6B41C44A6520081C7B2 /* NLHomeVC.m */; };
 		080CE6B71C44A6520081C7B2 /* NLHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 080CE6B51C44A6520081C7B2 /* NLHomeVC.xib */; };
+		083989BB1C4896AD00B419B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 083989B91C4896AD00B419B0 /* LaunchScreen.storyboard */; };
+		083989BF1C489CB700B419B0 /* NLAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 083989BD1C489CB700B419B0 /* NLAboutVC.m */; };
+		083989C01C489CB700B419B0 /* NLAboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083989BE1C489CB700B419B0 /* NLAboutVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +23,14 @@
 		080CE69F1C44A5560081C7B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		080CE6A01C44A5560081C7B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		080CE6A81C44A5560081C7B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		080CE6AB1C44A5560081C7B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		080CE6AD1C44A5560081C7B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		080CE6B31C44A6520081C7B2 /* NLHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLHomeVC.h; path = Classes/NLHomeVC.h; sourceTree = "<group>"; };
 		080CE6B41C44A6520081C7B2 /* NLHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLHomeVC.m; path = Classes/NLHomeVC.m; sourceTree = "<group>"; };
 		080CE6B51C44A6520081C7B2 /* NLHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NLHomeVC.xib; path = Classes/NLHomeVC.xib; sourceTree = "<group>"; };
+		083989BA1C4896AD00B419B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		083989BC1C489CB700B419B0 /* NLAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLAboutVC.h; path = Classes/NLAboutVC.h; sourceTree = "<group>"; };
+		083989BD1C489CB700B419B0 /* NLAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLAboutVC.m; path = Classes/NLAboutVC.m; sourceTree = "<group>"; };
+		083989BE1C489CB700B419B0 /* NLAboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NLAboutVC.xib; path = Classes/NLAboutVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +65,9 @@
 			children = (
 				080CE69F1C44A5560081C7B2 /* AppDelegate.h */,
 				080CE6A01C44A5560081C7B2 /* AppDelegate.m */,
-				080CE6B31C44A6520081C7B2 /* NLHomeVC.h */,
-				080CE6B41C44A6520081C7B2 /* NLHomeVC.m */,
-				080CE6B51C44A6520081C7B2 /* NLHomeVC.xib */,
+				083989C11C489CC300B419B0 /* Home */,
 				080CE6A81C44A5560081C7B2 /* Assets.xcassets */,
-				080CE6AA1C44A5560081C7B2 /* LaunchScreen.storyboard */,
+				083989B91C4896AD00B419B0 /* LaunchScreen.storyboard */,
 				080CE6AD1C44A5560081C7B2 /* Info.plist */,
 				080CE69C1C44A5560081C7B2 /* Supporting Files */,
 			);
@@ -77,6 +80,19 @@
 				080CE69D1C44A5560081C7B2 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		083989C11C489CC300B419B0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				080CE6B31C44A6520081C7B2 /* NLHomeVC.h */,
+				080CE6B41C44A6520081C7B2 /* NLHomeVC.m */,
+				080CE6B51C44A6520081C7B2 /* NLHomeVC.xib */,
+				083989BC1C489CB700B419B0 /* NLAboutVC.h */,
+				083989BD1C489CB700B419B0 /* NLAboutVC.m */,
+				083989BE1C489CB700B419B0 /* NLAboutVC.xib */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +152,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				080CE6AC1C44A5560081C7B2 /* LaunchScreen.storyboard in Resources */,
+				083989C01C489CB700B419B0 /* NLAboutVC.xib in Resources */,
+				083989BB1C4896AD00B419B0 /* LaunchScreen.storyboard in Resources */,
 				080CE6B71C44A6520081C7B2 /* NLHomeVC.xib in Resources */,
 				080CE6A91C44A5560081C7B2 /* Assets.xcassets in Resources */,
 			);
@@ -149,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083989BF1C489CB700B419B0 /* NLAboutVC.m in Sources */,
 				080CE6A11C44A5560081C7B2 /* AppDelegate.m in Sources */,
 				080CE6B61C44A6520081C7B2 /* NLHomeVC.m in Sources */,
 				080CE69E1C44A5560081C7B2 /* main.m in Sources */,
@@ -158,10 +176,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		080CE6AA1C44A5560081C7B2 /* LaunchScreen.storyboard */ = {
+		083989B91C4896AD00B419B0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				080CE6AB1C44A5560081C7B2 /* Base */,
+				083989BA1C4896AD00B419B0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -292,6 +310,7 @@
 				080CE6B21C44A5560081C7B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

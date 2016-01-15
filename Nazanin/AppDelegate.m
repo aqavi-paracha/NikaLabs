@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NLHomeVC.h"
+#import "NLAboutVC.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +21,10 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.homeVC = [[NLHomeVC alloc] initWithNibName:@"NLHomeVC" bundle:nil];
+//    self.homeVC = [[NLHomeVC alloc] initWithNibName:@"NLHomeVC" bundle:nil];
+    self.aboutVC = [[NLAboutVC alloc] initWithNibName:@"NLAboutVC" bundle:nil];
     
-    [self.window setRootViewController:self.homeVC];
+    [self.window setRootViewController:self.aboutVC];
     [self.window makeKeyAndVisible];
 
     return YES;
