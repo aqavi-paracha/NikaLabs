@@ -31,6 +31,10 @@
         
         [viewControllers addObject:[NSNull null]];
     }
+    
+    // First time (by default), load the Home screen on launch of BaseVC
+    [self updateTheVC:0];
+    [self loadTheView:0];
 }
 
 - (void)didReceiveMemoryWarning {
