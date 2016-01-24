@@ -17,6 +17,8 @@
 		083989C01C489CB700B419B0 /* NLHomeBaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083989BE1C489CB700B419B0 /* NLHomeBaseVC.xib */; };
 		083989C51C48A38800B419B0 /* NLAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 083989C31C48A38800B419B0 /* NLAboutVC.m */; };
 		083989C61C48A38800B419B0 /* NLAboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083989C41C48A38800B419B0 /* NLAboutVC.xib */; };
+		0865951B1C5488F800C1EFD8 /* NLAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865951A1C5488F800C1EFD8 /* NLAPIManager.m */; };
+		2CEDC985EF91B8CC673EA356 /* libPods-Nazanin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C67E4920D138BEC1C5F94B7 /* libPods-Nazanin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,11 @@
 		083989C21C48A38800B419B0 /* NLAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLAboutVC.h; path = Classes/NLAboutVC.h; sourceTree = "<group>"; };
 		083989C31C48A38800B419B0 /* NLAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLAboutVC.m; path = Classes/NLAboutVC.m; sourceTree = "<group>"; };
 		083989C41C48A38800B419B0 /* NLAboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NLAboutVC.xib; path = Classes/NLAboutVC.xib; sourceTree = "<group>"; };
+		086595191C5488F800C1EFD8 /* NLAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLAPIManager.h; path = Managers/NLAPIManager.h; sourceTree = "<group>"; };
+		0865951A1C5488F800C1EFD8 /* NLAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLAPIManager.m; path = Managers/NLAPIManager.m; sourceTree = "<group>"; };
+		21C3553E7759EA8417762FBA /* Pods-Nazanin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nazanin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nazanin/Pods-Nazanin.release.xcconfig"; sourceTree = "<group>"; };
+		51D4869B684B42B5B72A2146 /* Pods-Nazanin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nazanin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nazanin/Pods-Nazanin.debug.xcconfig"; sourceTree = "<group>"; };
+		7C67E4920D138BEC1C5F94B7 /* libPods-Nazanin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nazanin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CEDC985EF91B8CC673EA356 /* libPods-Nazanin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +62,8 @@
 			children = (
 				080CE69B1C44A5560081C7B2 /* Nazanin */,
 				080CE69A1C44A5560081C7B2 /* Products */,
+				BED8E022E74686DD93A379A2 /* Pods */,
+				DA308B3FCFF16594525F63AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +80,8 @@
 			children = (
 				080CE69F1C44A5560081C7B2 /* AppDelegate.h */,
 				080CE6A01C44A5560081C7B2 /* AppDelegate.m */,
+				086595191C5488F800C1EFD8 /* NLAPIManager.h */,
+				0865951A1C5488F800C1EFD8 /* NLAPIManager.m */,
 				083989C11C489CC300B419B0 /* Home */,
 				080CE6A81C44A5560081C7B2 /* Assets.xcassets */,
 				083989B91C4896AD00B419B0 /* LaunchScreen.storyboard */,
@@ -103,6 +115,23 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		BED8E022E74686DD93A379A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51D4869B684B42B5B72A2146 /* Pods-Nazanin.debug.xcconfig */,
+				21C3553E7759EA8417762FBA /* Pods-Nazanin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA308B3FCFF16594525F63AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C67E4920D138BEC1C5F94B7 /* libPods-Nazanin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 080CE6B01C44A5560081C7B2 /* Build configuration list for PBXNativeTarget "Nazanin" */;
 			buildPhases = (
+				277923DE80C25BD466634948 /* Check Pods Manifest.lock */,
 				080CE6951C44A5560081C7B2 /* Sources */,
 				080CE6961C44A5560081C7B2 /* Frameworks */,
 				080CE6971C44A5560081C7B2 /* Resources */,
+				BB829A83FE0C35DE5A22B848 /* Embed Pods Frameworks */,
+				D520A72C639E492058E2FF3D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,6 +202,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		277923DE80C25BD466634948 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BB829A83FE0C35DE5A22B848 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nazanin/Pods-Nazanin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D520A72C639E492058E2FF3D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nazanin/Pods-Nazanin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		080CE6951C44A5560081C7B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -179,6 +259,7 @@
 				080CE6A11C44A5560081C7B2 /* AppDelegate.m in Sources */,
 				080CE6B61C44A6520081C7B2 /* NLHomeVC.m in Sources */,
 				083989C51C48A38800B419B0 /* NLAboutVC.m in Sources */,
+				0865951B1C5488F800C1EFD8 /* NLAPIManager.m in Sources */,
 				080CE69E1C44A5560081C7B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +360,7 @@
 		};
 		080CE6B11C44A5560081C7B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51D4869B684B42B5B72A2146 /* Pods-Nazanin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -291,6 +373,7 @@
 		};
 		080CE6B21C44A5560081C7B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C3553E7759EA8417762FBA /* Pods-Nazanin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

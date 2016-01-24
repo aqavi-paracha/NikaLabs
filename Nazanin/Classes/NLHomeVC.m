@@ -7,6 +7,7 @@
 //
 
 #import "NLHomeVC.h"
+#import "NLAPIManager.h"
 
 @interface NLHomeVC () <UITableViewDataSource, UITabBarDelegate>
 
@@ -16,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    
+    NLAPIManager* apiManager = [NLAPIManager sharedManager];
+    [apiManager loginWith:@{@"username":@"nazanin",  @"password": @"abc"} andTarget:self];
+
 }
 
 - (void)didReceiveMemoryWarning {

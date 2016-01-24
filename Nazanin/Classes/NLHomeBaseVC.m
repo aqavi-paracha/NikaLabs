@@ -76,15 +76,11 @@
 
     if (page == 0) {
         controller = [[NLHomeVC alloc] initWithNibName:@"NLHomeVC" bundle:nil];
-
     }
     else if (page == 1) {
         controller = [[NLAboutVC alloc] initWithNibName:@"NLAboutVC" bundle:nil];
-        
     }
-    else {
-        
-    }
+    else { }
     
     [viewControllers replaceObjectAtIndex:page withObject:controller];
 

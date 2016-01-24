@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "NLHomeVC.h"
 #import "NLHomeBaseVC.h"
+#import "NLAPIManager.h"
 
 @interface AppDelegate ()
 
