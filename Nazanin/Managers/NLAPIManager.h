@@ -9,12 +9,12 @@
 #import <AFNetworking/AFNetworking.h>
 
 
-
 @protocol NLAPIManagerDelegate <NSObject>
 
 @optional
-
 - (void)loginCallback:(id)response;
+- (void)getPhotosCallback:(id)response;
+- (void)getAllValuesCallback:(id)response;
 
 @end
 
@@ -22,6 +22,8 @@
 
 + (NLAPIManager* )sharedManager;
 
+- (void)getPhotos:(NSDictionary*)params andTarget:(id)target;
 - (void)loginWith:(NSDictionary*)params andTarget:(id)target;
+- (void)getAllValues:(NSString*)value andTarget:(id)target;
 
 @end

@@ -18,6 +18,7 @@
 		083989C51C48A38800B419B0 /* NLAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 083989C31C48A38800B419B0 /* NLAboutVC.m */; };
 		083989C61C48A38800B419B0 /* NLAboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083989C41C48A38800B419B0 /* NLAboutVC.xib */; };
 		0865951B1C5488F800C1EFD8 /* NLAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865951A1C5488F800C1EFD8 /* NLAPIManager.m */; };
+		08F0394C1C9273B900BAD18F /* NLCinema.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F0394B1C9273B900BAD18F /* NLCinema.m */; };
 		2CEDC985EF91B8CC673EA356 /* libPods-Nazanin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C67E4920D138BEC1C5F94B7 /* libPods-Nazanin.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,8 @@
 		083989C41C48A38800B419B0 /* NLAboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NLAboutVC.xib; path = Classes/NLAboutVC.xib; sourceTree = "<group>"; };
 		086595191C5488F800C1EFD8 /* NLAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLAPIManager.h; path = Managers/NLAPIManager.h; sourceTree = "<group>"; };
 		0865951A1C5488F800C1EFD8 /* NLAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLAPIManager.m; path = Managers/NLAPIManager.m; sourceTree = "<group>"; };
+		08F0394A1C9273B900BAD18F /* NLCinema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NLCinema.h; path = Models/NLCinema.h; sourceTree = "<group>"; };
+		08F0394B1C9273B900BAD18F /* NLCinema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NLCinema.m; path = Models/NLCinema.m; sourceTree = "<group>"; };
 		21C3553E7759EA8417762FBA /* Pods-Nazanin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nazanin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nazanin/Pods-Nazanin.release.xcconfig"; sourceTree = "<group>"; };
 		51D4869B684B42B5B72A2146 /* Pods-Nazanin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nazanin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nazanin/Pods-Nazanin.debug.xcconfig"; sourceTree = "<group>"; };
 		7C67E4920D138BEC1C5F94B7 /* libPods-Nazanin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nazanin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,8 +114,18 @@
 				083989C21C48A38800B419B0 /* NLAboutVC.h */,
 				083989C31C48A38800B419B0 /* NLAboutVC.m */,
 				083989C41C48A38800B419B0 /* NLAboutVC.xib */,
+				08F0394D1C9273C800BAD18F /* Models */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		08F0394D1C9273C800BAD18F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				08F0394A1C9273B900BAD18F /* NLCinema.h */,
+				08F0394B1C9273B900BAD18F /* NLCinema.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		BED8E022E74686DD93A379A2 /* Pods */ = {
@@ -260,6 +273,7 @@
 				080CE6B61C44A6520081C7B2 /* NLHomeVC.m in Sources */,
 				083989C51C48A38800B419B0 /* NLAboutVC.m in Sources */,
 				0865951B1C5488F800C1EFD8 /* NLAPIManager.m in Sources */,
+				08F0394C1C9273B900BAD18F /* NLCinema.m in Sources */,
 				080CE69E1C44A5560081C7B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

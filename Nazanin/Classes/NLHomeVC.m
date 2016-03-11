@@ -8,8 +8,15 @@
 
 #import "NLHomeVC.h"
 #import "NLAPIManager.h"
+#import "NLCinema.h"
 
-@interface NLHomeVC () <UITableViewDataSource, UITabBarDelegate>
+@interface NLHomeVC () <UITableViewDataSource, UITabBarDelegate, NLAPIManagerDelegate> {
+    
+    NSArray* cinemaValues;
+    
+    __weak IBOutlet UITableView *tableViewValues;
+    
+}
 
 @end
 
@@ -18,10 +25,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    cinemaValues = [NSArray array];
     
     NLAPIManager* apiManager = [NLAPIManager sharedManager];
-    [apiManager loginWith:@{@"username":@"nazanin",  @"password": @"abc"} andTarget:self];
-
+    [apiManager getAllValues:@"all" andTarget:self];
+//    [apiManager getPhotos:nil andTarget:self];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,12 +38,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - NLAPIManagerDelegate Methods
 
+- (void)getAllValuesCallback:(id)response {
+  
+    cinemaValues = (NSArray *)response;
+    [tableViewValues reloadData];
+}
+
+//- (void)getPhotosCallback:(id)response {
+//}
 
 #pragma mark - UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return cinemaValues.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -48,8 +66,8 @@
         cell.textLabel.numberOfLines = 0;
     }
 
-    
-    cell.textLabel.text = @"hello";
+    NLCinema* cinema = cinemaValues[indexPath.row];
+    cell.textLabel.text = cinema.cinemaName;
     
     return cell;
 }
@@ -59,6 +77,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NLCinema* cinema = cinemaValues[indexPath.row];
+    NSLog(@"ID of cinema name: %@", cinema.cinemaID);
 }
 
 

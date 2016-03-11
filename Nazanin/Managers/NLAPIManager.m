@@ -8,6 +8,7 @@
 
 #import "NLAPIManager.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "NLCinema.h"
 
 @interface NLAPIManager()
 
@@ -21,7 +22,7 @@
 
 - (id)initSingleton {
     
-    if ((self = [super initWithBaseURL:[NSURL URLWithString:@"http://nikalabs.com/api/"]])) {
+    if ((self = [super initWithBaseURL:[NSURL URLWithString:@"http://localhost/movie_ticket_reserv_rest"]])) {
         
         self.requestSerializer = [AFJSONRequestSerializer serializer];
         self.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
@@ -57,11 +58,82 @@
         [SVProgressHUD showErrorWithStatus:@"NO_INTERNET"];
     }
     else {
-        [SVProgressHUD showErrorWithStatus:@"SERVER_ERROR"];  // :error.description
+        [SVProgressHUD showErrorWithStatus:@"SERVER_ERROR"];
     }
 }
 
 #pragma mark - Service calls
+
+- (void)getAllValues:(NSString*)value andTarget:(id)target {
+    
+    id <NLAPIManagerDelegate> delegate = target;
+    
+    [SVProgressHUD showWithStatus:@"Loading..." maskType:SVProgressHUDMaskTypeClear];
+    
+    [self GET:[NSString stringWithFormat:@"all_home_values.php?all_home_values=%@", value] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        // We Parse Server data into our objects, and then redirect data to the delegate
+        [SVProgressHUD dismiss];
+        NSLog(@"JSON: %@", responseObject);
+        
+        
+        NSDictionary* dict = (NSDictionary *)responseObject;
+
+        if ([dict[@"status"] intValue] == 1) {
+            
+            NSArray* cinemaSource = dict[@"cinemas"];
+
+            NSMutableArray* cinemaDestinations = [NSMutableArray array];
+            
+            for (NSDictionary* cinema in cinemaSource) {
+                
+                NLCinema* cin = [[NLCinema alloc] init];
+                cin.cinemaID = cinema[@"cinema_id"];
+                cin.cinemaName = cinema[@"cinema_name"];
+                
+                [cinemaDestinations addObject:cin];
+            }
+
+            if ([delegate respondsToSelector:@selector(getAllValuesCallback:)]) {
+                [delegate getAllValuesCallback:cinemaDestinations];
+            }
+        }
+        else {   }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [SVProgressHUD dismiss];
+        [self showServiceFailureError:error];
+    }];
+}
+
+
+-(void)getPhotos:(NSDictionary *)params andTarget:(id)target {
+    
+//    nikalabs.com/api/getPhotos?id=abc&number_of_photos=50
+
+    id <NLAPIManagerDelegate> delegate = target;
+    
+    [self GET:[NSString stringWithFormat:@"seats.php?available_seats=1"] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        // We Parse Server data into our objects, and then redirect data to the delegate
+
+        if ([delegate respondsToSelector:@selector(getPhotosCallback:)]) {
+            [delegate getPhotosCallback:responseObject];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [self showServiceFailureError:error];
+    }];
+    
+}
+
 
 /************************ POST Methods ************************/
 
